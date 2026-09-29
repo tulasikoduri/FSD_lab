@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Box Model</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightgray;
+        }
+
+        h1 {
+            text-align: center;
+            color: darkblue;
+        }
+
+        /* Outer space - Margin */
+        .box {
+            width: 300px;
+            height: 150px;
+
+            /* Content */
+            background-color: lightblue;
+
+            /* Padding */
+            padding: 30px;
+
+            /* Border */
+            border: 8px solid darkblue;
+
+            /* Margin */
+            margin: 50px auto;
+
+            text-align: center;
+        }
+
+        .content {
+            background-color: white;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Box Model</h1>
+
+    <div class="box">
+
+        <!-- Content -->
+        <div class="content">
+            <h2>Content</h2>
+            <p>This is the content area.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+
