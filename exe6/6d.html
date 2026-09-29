@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Voter Eligibility</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        table {
+            margin: auto;
+            border-collapse: collapse;
+            width: 500px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 12px;
+        }
+
+        th {
+            background-color: lightblue;
+        }
+
+        .yes {
+            color: green;
+            font-weight: bold;
+        }
+
+        .no {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Voter Eligibility</h1>
+
+    <button onclick="checkVoter()">Enter Voter Details</button>
+
+    <div id="result"></div>
+
+    <script>
+        function checkVoter() {
+
+            // Taking input using prompt()
+            let name = prompt("Enter your name:");
+            let age = prompt("Enter your age:");
+
+            // Convert age from string to number
+            age = Number(age);
+
+            // Check voting eligibility
+            let status;
+
+            if (age >= 18) {
+                status = "Can Vote";
+            } else {
+                status = "Cannot Vote";
+            }
+
+            // Display result in table
+            document.getElementById("result").innerHTML =
+                "<br><table>" +
+                "<tr>" +
+                "<th>Name</th>" +
+                "<th>Age</th>" +
+                "<th>Voting Status</th>" +
+                "</tr>" +
+
+                "<tr>" +
+                "<td>" + name + "</td>" +
+                "<td>" + age + "</td>" +
+                "<td class='" + (age >= 18 ? "yes" : "no") + "'>" +
+                status +
+                "</td>" +
+                "</tr>" +
+
+                "</table>";
+        }
+    </script>
+
+</body>
+</html>
