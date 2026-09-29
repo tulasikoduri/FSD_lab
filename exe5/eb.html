@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Background Image - Fixed and Tilted</title>
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 2000px;
+            font-family: Arial, sans-serif;
+            background-color: lightgray;
+        }
+
+        /* Background image */
+        .background-image {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+
+            width: 600px;
+            height: 350px;
+
+            background-image: url("https://picsum.photos/600/350");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            /* Move image to center */
+            transform: translate(-50%, -50%) rotate(8deg);
+
+            /* Keep image behind the content */
+            z-index: -1;
+
+            /* Transparency */
+            opacity: 0.6;
+        }
+
+        .content {
+            padding: 50px;
+            text-align: center;
+        }
+
+        h1 {
+            color: darkblue;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Fixed tilted background image -->
+    <div class="background-image"></div>
+
+    <div class="content">
+        <h1>Fixed Background Image</h1>
+
+        <p>
+            This is a webpage with a background image positioned
+            halfway down the page.
+        </p>
+
+        <p>
+            The image is tilted horizontally using the CSS
+            rotate() function.
+        </p>
+
+        <p>
+            Scroll down the page to see that the image remains
+            fixed in the same position.
+        </p>
+
+        <p>
+            CSS property used: background-image, background-size,
+            background-position, position: fixed, and transform.
+        </p>
+
+        <p>
+            Scroll the page to observe the fixed background image.
+        </p>
+    </div>
+
+</body>
+</html>
