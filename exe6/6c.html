@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Input Methods</title>
+</head>
+
+<body>
+
+    <h1>Different Ways of Taking Input</h1>
+
+    <!-- 1. Using HTML Input -->
+    <h2>1. Using HTML Input Field</h2>
+
+    <input type="text" id="name" placeholder="Enter your name">
+    <button onclick="getName()">Submit</button>
+
+    <p id="result1"></p>
+
+
+    <!-- 2. Using prompt() -->
+    <h2>2. Using prompt()</h2>
+
+    <button onclick="getInput()">Enter Name</button>
+
+    <p id="result2"></p>
+
+
+    <!-- 3. Using Form -->
+    <h2>3. Using Form Input</h2>
+
+    <form onsubmit="return getFormData()">
+        <input type="text" id="city" placeholder="Enter your city">
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="result3"></p>
+
+
+    <script>
+
+        // 1. Taking input using HTML input field
+        function getName() {
+            let name = document.getElementById("name").value;
+
+            document.getElementById("result1").innerHTML =
+                "Hello, " + name + "!";
+        }
+
+
+        // 2. Taking input using prompt()
+        function getInput() {
+            let name = prompt("Enter your name:");
+
+            if (name != null && name != "") {
+                document.getElementById("result2").innerHTML =
+                    "You entered: " + name;
+            }
+        }
+
+
+        // 3. Taking input using form
+        function getFormData() {
+            let city = document.getElementById("city").value;
+
+            document.getElementById("result3").innerHTML =
+                "Your city is: " + city;
+
+            return false;
+        }
+
+    </script>
+
+</body>
+</html>
