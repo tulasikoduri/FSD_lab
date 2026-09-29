@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Output Methods</title>
+</head>
+
+<body>
+
+    <h1>Different Ways of Displaying Output</h1>
+
+    <!-- 1. innerHTML -->
+    <h2>1. Using innerHTML</h2>
+    <p id="output"></p>
+
+    <!-- 2. document.write() -->
+    <h2>2. Using document.write()</h2>
+    <button onclick="showWrite()">Click Me</button>
+
+    <!-- 3. alert() -->
+    <h2>3. Using alert()</h2>
+    <button onclick="showAlert()">Click Me</button>
+
+    <!-- 4. console.log() -->
+    <h2>4. Using console.log()</h2>
+    <button onclick="showConsole()">Click Me</button>
+
+
+    <script>
+
+        // 1. innerHTML
+        document.getElementById("output").innerHTML =
+            "Hello! This output is displayed using innerHTML.";
+
+
+        // 2. document.write()
+        function showWrite() {
+            document.write(
+                "<h1>Output using document.write()</h1>" +
+                "<p>Hello! This output is displayed using document.write().</p>"
+            );
+        }
+
+
+        // 3. alert()
+        function showAlert() {
+            alert("Hello! This output is displayed using alert().");
+        }
+
+
+        // 4. console.log()
+        function showConsole() {
+            console.log(
+                "Hello! This output is displayed using console.log()."
+            );
+        }
+
+    </script>
+
+</body>
+</html>
+
