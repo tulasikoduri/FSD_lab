@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Internal and External JavaScript</title>
+
+    <!-- Linking External JavaScript -->
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <h1>JavaScript in Web Page</h1>
+
+    <!-- Internal JavaScript -->
+    <h2>Internal JavaScript</h2>
+    <button onclick="internalJS()">Internal JS</button>
+    <p id="internalOutput"></p>
+
+    <!-- External JavaScript -->
+    <h2>External JavaScript</h2>
+    <button onclick="externalJS()">External JS</button>
+    <p id="externalOutput"></p>
+
+    <script>
+        // Internal JavaScript
+        function internalJS() {
+            document.getElementById("internalOutput").innerHTML =
+                "This is Internal JavaScript.";
+        }
+    </script>
+
+</body>
+</html>
