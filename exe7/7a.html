@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document Object Properties and Methods</title>
+</head>
+<body>
+
+    <h2 id="heading">JavaScript Document Object</h2>
+    <p id="message">This is a sample paragraph.</p>
+
+    <button onclick="showDetails()">Click Me</button>
+
+    <script>
+        function showDetails() {
+
+            // Document object properties
+            document.getElementById("heading").innerHTML =
+                "Document Object Properties and Methods";
+
+            document.getElementById("message").innerHTML =
+                "Document Title: " + document.title;
+
+            // Document object methods
+            document.write("<br>Document URL: " + document.URL);
+            document.write("<br>Document Last Modified: " +
+                           document.lastModified);
+        }
+    </script>
+
+</body>
+</html>
